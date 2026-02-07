@@ -1,0 +1,32 @@
+.floating-number {
+  position: absolute;
+  pointer-events: none;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--text-primary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  animation: float-up 0.8s ease-out forwards;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.floating-number.lucky {
+  font-size: 34px;
+  color: var(--accent-gold);
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  40% {
+    opacity: 0.9;
+    transform: translateX(-50%) translateY(-50px) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-120px) scale(0.7);
+  }
+}

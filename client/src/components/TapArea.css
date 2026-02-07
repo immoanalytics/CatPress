@@ -1,0 +1,11 @@
+.tap-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  padding: 20px;
+  min-height: 0;
+}

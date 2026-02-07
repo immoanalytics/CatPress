@@ -1,0 +1,106 @@
+.milestone-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.milestone-toast {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+  border-radius: 24px;
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.15), 0 20px 60px rgba(0, 0, 0, 0.4);
+  max-width: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.milestone-confetti {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  animation: confetti-burst 0.6s ease-out forwards;
+}
+
+.cp0 { background: #FFD700; }
+.cp1 { background: #FF6B9D; }
+.cp2 { background: #4ECDC4; }
+.cp3 { background: #A855F7; }
+.cp4 { background: #45B7D1; }
+.cp5 { background: #FFA94D; }
+
+@keyframes confetti-burst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform:
+      translate(
+        calc(cos(var(--angle)) * var(--dist)),
+        calc(sin(var(--angle)) * var(--dist))
+      )
+      rotate(360deg);
+  }
+}
+
+.milestone-emoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.milestone-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.milestone-name {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.milestone-desc {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.milestone-dismiss {
+  background: linear-gradient(135deg, var(--accent-gold), #FFA94D);
+  color: #1a1625;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 10px 36px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.milestone-dismiss:active {
+  transform: scale(0.95);
+}

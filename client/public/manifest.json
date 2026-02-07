@@ -1,0 +1,17 @@
+{
+  "name": "CatPress",
+  "short_name": "CatPress",
+  "description": "Tap the cat, earn points, unlock costumes!",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a1625",
+  "theme_color": "#1a1625",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

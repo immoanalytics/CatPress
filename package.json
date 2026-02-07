@@ -1,0 +1,15 @@
+{
+  "name": "catpress",
+  "version": "1.0.0",
+  "description": "CatPress - Tap the cat, earn points, unlock costumes!",
+  "private": true,
+  "scripts": {
+    "dev": "cd client && npx vite --host",
+    "postinstall": "cd client && npm install",
+    "build": "cd client && npx vite build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

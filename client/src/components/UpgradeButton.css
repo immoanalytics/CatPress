@@ -1,0 +1,95 @@
+.upgrade-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+}
+
+.upgrade-button.affordable {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.upgrade-button.affordable:active {
+  background: var(--bg-card-hover);
+}
+
+.upgrade-button.locked {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.upgrade-button.maxed {
+  opacity: 0.7;
+  cursor: default;
+  border-color: var(--accent-gold);
+  border-style: dashed;
+}
+
+.upgrade-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.upgrade-icon {
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+}
+
+.upgrade-info {
+  text-align: left;
+}
+
+.upgrade-name {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.upgrade-effect {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.upgrade-right {
+  text-align: right;
+}
+
+.upgrade-level {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.upgrade-cost {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.upgrade-cost.can-afford {
+  color: var(--accent-gold);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.maxed-text {
+  color: var(--accent-gold);
+  font-size: 13px;
+}
