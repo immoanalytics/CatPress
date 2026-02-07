@@ -13,7 +13,9 @@
   height: auto;
 }
 
-/* Tail wag animation */
+/* ======================== TAIL ANIMATIONS ======================== */
+
+/* Default tail wag — 2s standard (Gentleman, Wizard, Pirate, Void) */
 .cat-tail {
   transform-origin: 155px 200px;
   animation: tail-wag 2s ease-in-out infinite;
@@ -23,6 +25,89 @@
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(8deg); }
   75% { transform: rotate(-5deg); }
+}
+
+/* Kitten tail — faster, bouncier 1.5s */
+.cat-tail-kitten {
+  animation: tail-wag 1.5s ease-in-out infinite;
+}
+
+/* Royal puffball tail — slow dignified 3s sway */
+.cat-tail-royal {
+  animation: tail-royal-sway 3s ease-in-out infinite;
+}
+
+@keyframes tail-royal-sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+/* Astronaut tail — zero-G float 4s */
+.cat-tail-float {
+  animation: tail-wag 2s ease-in-out infinite, tail-float 4s ease-in-out infinite;
+}
+
+@keyframes tail-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Rainbow ribbon tail — undulation flow 3s */
+.cat-tail-flow {
+  animation: tail-ribbon 3s ease-in-out infinite;
+}
+
+@keyframes tail-ribbon {
+  0%, 100% { transform: scaleX(1) translateX(0); }
+  33% { transform: scaleX(0.97) translateX(2px); }
+  66% { transform: scaleX(1.03) translateX(-2px); }
+}
+
+/* Golden flame tail — flicker */
+.golden-flame {
+  animation: flame-flicker 2.5s ease-in-out infinite;
+}
+
+@keyframes flame-flicker {
+  0%, 100% { transform: rotate(0deg) scaleY(1); }
+  25% { transform: rotate(3deg) scaleY(1.02); }
+  50% { transform: rotate(-2deg) scaleY(0.98); }
+  75% { transform: rotate(4deg) scaleY(1.01); }
+}
+
+/* ======================== EYE ANIMATIONS ======================== */
+
+/* Void eye glow pulse */
+.void-eye {
+  animation: eye-pulse 2s ease-in-out infinite;
+}
+
+@keyframes eye-pulse {
+  0%, 100% { filter: url(#glow); }
+  50% { filter: url(#glow) brightness(1.5); }
+}
+
+/* Golden God divine eye glow */
+.eye-divine {
+  animation: divine-glow 3s ease-in-out infinite;
+}
+
+@keyframes divine-glow {
+  0%, 100% { filter: url(#glow) brightness(1); }
+  50% { filter: url(#glow) brightness(1.3); }
+}
+
+/* ======================== WING / BODY ANIMATIONS ======================== */
+
+/* Flutter wings — Rainbow cat fairy wings + Golden God divine wings */
+.flutter-wings {
+  animation: wing-flutter 2s ease-in-out infinite;
+}
+
+@keyframes wing-flutter {
+  0%, 100% { transform: scaleX(1) scaleY(1); opacity: 0.2; }
+  50% { transform: scaleX(1.08) scaleY(0.95); opacity: 0.35; }
 }
 
 /* Wizard star twinkle */
@@ -55,7 +140,8 @@
   50% { transform: translateY(-4px); }
 }
 
-/* Void particles float */
+/* ======================== VOID PARTICLES ======================== */
+
 .void-particle {
   animation: void-float 4s ease-in-out infinite;
 }
@@ -72,15 +158,7 @@
   50% { transform: translateY(-15px) scale(1.3); opacity: 0.7; }
 }
 
-/* Void eye glow pulse */
-.void-eye {
-  animation: eye-pulse 2s ease-in-out infinite;
-}
-
-@keyframes eye-pulse {
-  0%, 100% { filter: url(#glow); }
-  50% { filter: url(#glow) brightness(1.5); }
-}
+/* ======================== GOLDEN GOD EFFECTS ======================== */
 
 /* Golden rays rotation */
 .golden-rays {
